@@ -13,10 +13,13 @@ jcat: jcat.o
 	$(CROSS)$(CC) $(CFLAGS) -shared -fPIC jcat.c -o lib$(LIB_NAME).so  
 
 jcat.o: jcat.c jcat.h
+	@#Generating .o
 	$(CROSS)$(CC) $(CFLAGS) -c jcat.c -o jcat.o
 
 install:
+	@echo "Instaling libjcat.so in /usr/lib"
 	@sudo cp ./$(LIB_NAME).so /usr/lib
+	@echo "Instaling jcat.h in /usr/include"
 	@sudo cp ./$(LIB_NAME).h /usr/include
 clean:
 	rm -rf *.o *.so
