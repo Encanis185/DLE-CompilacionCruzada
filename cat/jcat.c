@@ -3,15 +3,15 @@
 #include <string.h>
 #include "jcat.h"
 
-int jcat(int argc, char** argv){
+int jCat(const char* argv){
 	const int bufferSize = 4096;
 	char buffer[bufferSize];
     FILE *fp;
 
     if(argc > 1){
-        fp = fopen(argv[argc -1], "rb");
+        fp = fopen(argv, "rb");
         if (fp == NULL) {
-            fprintf(stderr, "%s: %s: No such file or directory", argv[0], argv[argc-1]);
+        	perror("An error happend while trying to open file\n");
             exit(EXIT_FAILURE);
 	    }
     }
