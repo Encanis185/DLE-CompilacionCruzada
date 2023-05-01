@@ -1,16 +1,12 @@
 /******************************************************************************
- *Name: minibusybox_modular_FranciscoSaldivar.c
- *@brief: Personal implementation of tool similar to BusyBox built with shared
+ *Name: main.c
+ *@brief: Group implementation of tool similar to BusyBox built with shared
  *libraries. Each shared library implement one of the next commands:
- *sleep
- *uname
- *ls
  *cat
- *uptime
  *lsmod
  ******************************************************************************
- *Author: José Francisco Saldivar Ceniceros
- *Date: 27/04/2023
+ *Author: José Francisco Saldivar Ceniceros and Josafat Jauregui
+ *Date: 30/04/2023
  *Place: Guadalajara, México
  *****************************************************************************/
 #include <stdio.h>
@@ -24,13 +20,13 @@ int main(int argc, char **arg_v)
     unsigned char o = 0;
     puts("Welcome to minibusybox_modular!!!");
     puts("Select one valid option from menu to execute a command:");
-    printf("Option 1: cat\n");
-    printf("Option 2: lsmod\n");
+    printf("Option 0: cat\n");
+    printf("Option 1: lsmod\n");
     scanf("%hhu", &o);
     switch (o)
     {
 
-       case 1:
+        case 0:
         //If the command requested was cat
 
             char file_name[100] = "\0";
@@ -45,7 +41,7 @@ int main(int argc, char **arg_v)
             }
         break;
 
-       case 2:
+        case 1:
         //If the command requested was lsmod
             if(func_lsmod(argc))
             {
