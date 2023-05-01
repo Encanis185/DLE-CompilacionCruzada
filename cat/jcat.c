@@ -3,7 +3,7 @@
 #include <string.h>
 #include "jcat.h"
 
-int jCat(const char* argv){
+int jcat(const char* argv){
 	const int bufferSize = 4096;
 	char buffer[bufferSize];
     FILE *fp;

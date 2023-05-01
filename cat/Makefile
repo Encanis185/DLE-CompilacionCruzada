@@ -18,7 +18,7 @@ jcat.o: jcat.c jcat.h
 
 install:
 	@echo "Instaling libjcat.so in /usr/lib"
-	@sudo cp ./$(LIB_NAME).so /usr/lib
+	@sudo cp ./lib$(LIB_NAME).so /usr/lib
 	@echo "Instaling jcat.h in /usr/include"
 	@sudo cp ./$(LIB_NAME).h /usr/include
 clean:
