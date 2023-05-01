@@ -28,7 +28,7 @@ int main(int argc, char **arg_v)
 
         case 0:
         //If the command requested was cat
-
+            ;
             char file_name[100] = "\0";
             printf("Enter file name or full path: ");
             scanf("%s", file_name);

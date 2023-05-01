@@ -1,12 +1,12 @@
 
-OBJECTS = liblsmod.so libcat.so minibusy_modular.o
+OBJECTS = liblsmod.so libcat.so main.o
 COMPILER = gcc
 CROSS_COMPILER =
 SHARED_PATH = ./
 APP_NAME = minibusy_modular
 FLAGS = -Wall -Werror -o
 SHARED_FLAGS = -c -Wall -Werror -fPIC
-SHARED_LIBS_FLAGS = -llsmod -ljcat
+SHARED_LIBS_FLAGS = -llsmod -lcat
 LSMOD_SOURCE_PATH = ./lsmod/func_lsmod.c
 LSMOD_INC_PATH = ./lsmod/lsmod.h
 CAT_SOURCE_PATH = ./cat/jcat.c
