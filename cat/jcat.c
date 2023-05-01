@@ -8,13 +8,14 @@ int jcat(const char* argv){
 	char buffer[bufferSize];
     FILE *fp;
 
-    if(argc > 1){
-        fp = fopen(argv, "rb");
-        if (fp == NULL) {
-        	perror("An error happend while trying to open file\n");
-            exit(EXIT_FAILURE);
-	    }
+    fp = fopen(argv, "rb");
+
+
+    if (fp == NULL) {
+       	perror("An error happend while trying to open file\n");
+        exit(EXIT_FAILURE);
     }
+
 
 
 	while (fgets(buffer, bufferSize, (fp == NULL ? stdin : fp))) {
