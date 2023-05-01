@@ -16,7 +16,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
-#include "./uptime/uptime.h"
+#include "./lsmod/lsmod.h"
 #include "./cat/jcat.h"
 
 int main(int argc, char **arg_v)
