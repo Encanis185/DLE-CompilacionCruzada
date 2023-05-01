@@ -16,7 +16,7 @@ jcat.o: jcat.c jcat.h
 	$(CROSS)$(CC) $(CFLAGS) -c jcat.c -o jcat.o
 
 install:
-	@sudo cp ./$(LIB_NAME).so /usr/lib
+	@sudo cp ./lib$(LIB_NAME).so /usr/lib
 	@sudo cp ./$(LIB_NAME).h /usr/include
 clean:
 	rm -rf *.o *.so
